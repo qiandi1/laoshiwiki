@@ -26,9 +26,9 @@ public class TestController {
     @Resource
     private RedisTemplate redisTemplate;
 
-    /**
+    /**增删改查：
      * GET, POST, PUT, DELETE
-     *
+     *请求一个用户id
      * /user?id=1
      * /user/1
      * @return

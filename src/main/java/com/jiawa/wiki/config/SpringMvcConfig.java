@@ -1,6 +1,6 @@
 package com.jiawa.wiki.config;
 
-import com.jiawa.wiki.interceptor.ActionInterceptor;
+//import com.jiawa.wiki.interceptor.ActionInterceptor;
 import com.jiawa.wiki.interceptor.LoginInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -14,8 +14,8 @@ public class SpringMvcConfig implements WebMvcConfigurer {
     @Resource
     LoginInterceptor loginInterceptor;
 
-    @Resource
-    ActionInterceptor actionInterceptor;
+//    @Resource
+//    ActionInterceptor actionInterceptor;
 
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loginInterceptor)
@@ -32,10 +32,10 @@ public class SpringMvcConfig implements WebMvcConfigurer {
                         "/ebook-snapshot/**"
                 );
 
-        registry.addInterceptor(actionInterceptor)
-                .addPathPatterns(
-                        "/*/save",
-                        "/*/delete/**",
-                        "/*/reset-password");
+//        registry.addInterceptor(actionInterceptor)
+//                .addPathPatterns(
+//                        "/*/save",
+//                        "/*/delete/**",
+//                        "/*/reset-password");
     }
 }
